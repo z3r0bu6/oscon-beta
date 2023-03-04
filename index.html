@@ -1,76 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-<title>Oscon - Open Source IT Consulting</title>
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-<link type="text/css" rel="stylesheet" href="style.css"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/standard.css" id="stylesheet">
+	<link rel="alternate stylesheet" href="./css/classic.css" title="standard">
+	<script src="js/stylesheet-wechsler.js"></script>
+	<title>CSS-Garten - Startseite</title>
 </head>
-<body>
-<div id="wrapper">
-  <div id="header">
-    <div id="top">
-      <div id="logo">
-        <h1>Oscon</h1>
-        <p>Opensource IT Consulting</p>
-      </div>
-      <div id="menu">
+<body id="index">
+  	<header>
+		<h1>
+        	<a id="logo" href="./index.html" title="zurück zur Startseite">Logo</a>
+            CSS-Garten
+        </h1>
+		<nav>
+			<ul>
+				<li><a aria-current="page">Startseite</a></li>
+				<li><a href="inhalt.html">Inhalt</a></li>
+				<li><a href="termine.html">Termine</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+    <aside id="news">
+		<h2>eine Bitte:</h2>
+		<p>Wenn Sie mit uns zufrieden sind, sagen Sie's weiter! </p>
+		<p>
+			Wenn nicht, sagen Sie's
+			<a href="https://forum.selfhtml.org/meta/new">uns</a>!
+		</p>
+	</aside>
+	<article>
+		<h2>Templates mit fertigen Layouts</h2>
+		<p><img src="img/dummy-1.jpg" alt="Fun in the sun"> 
+            Selfhtml bietet mit diesen Vorlagen Beispiele für eigene Webseiten, die Sie frei verändern, erweitern und ausgestalten können. 
+		</p>
+		<p>
+			Es besteht aus einem <strong>HTML-Template</strong>, das …
+		</p>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">AboutUs</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Place Holder</a></li>
-          <li><a href="#">ContactUs</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div id="main"> &nbsp; </div>
-  <div id="content">
-    <div id="left">
-      <h1>STRATEGY</h1>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
-      <h2><a href="#">&#91;More&#93;</a></h2>
-    </div>
-    <div id="right">
-      <h1>PLANNING</h1>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      <h2><a href="#">&#91;More&#93;</a></h2>
-    </div>
-    <div id="center" >
-      <h1>MANAGEMENT</h1>
-      <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-      <h2><a href="#">&#91;More&#93;</a></h2>
-    </div>
-  </div>
-  <div id="container">
-    <div id="lcontain">
-      <h1>OUR NEWS</h1>
-      <h2>July 5,2008</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh....<a href="#">more</a></p>
-      <h2>July 5,2008</h2>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh....<a href="#">more</a></p>
-    </div>
-    <div id="rcontain">
-      <h1>IMPROVE BUSINESS WITH CONSULTING SERVICES</h1>
-      <p> Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan. </p>
-      �
-      <div class="col">
+           <li>aus semantischen und validem Code besteht</li>
+           <li>leicht erweiterbar ist</li>
+           <li>barrierefrei und so auch für Screenreader bedienungsfreundlich ist.</li>
+        </ul>   
+ 		<p>
+			Dazu gibt es mehrere <strong>Layouts</strong> (<i>Skins</i> oder <i>Themes</i>), die …
+		</p>
         <ul>
-          <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-          <li><a href="#">consectetuer adipiscing elit</a></li>
-          <li><a href="#">Ut wisi enim ad minim veniam</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-          <li><a href="#">consectetuer adipiscing elit</a></li>
-          <li><a href="#">Ut wisi enim ad minim veniam</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div id="footer"> Copyright	&copy; 2023 by <a href="#">Oscon - OpenSource IT Consulting</a>
-</div>
+           <li>durch CSS-Stylesheets zentral für alle Seiten gesteuert werden</li>
+		   <li>dank <strong>responsivem Webdesign</strong> auf allen Geräten gut aussehen</li>
+        </ul>          
+		<p>Der Einsatz von JavaScript oder jQuery ist für die hier verwendeten Animationen nicht nötig.</p>
+
+	</article>
+	<aside id="styleswitcher">
+		<h2>Ansicht wechseln</h2>
+        	<ul>
+            	<li><button data-stylesheet="./css/standard.css">Standard</button></li>
+			  	<li><button data-stylesheet="./css/black-white.css">Black & White</button></li>
+				<li><button data-stylesheet="./css/classic.css">Classic</button></li>
+				<li><button data-stylesheet="./css/duotone.css">Duotone</button></li>
+				<li><button data-stylesheet="./css/elegant.css">elegant</button></li>
+				<li><button data-stylesheet="./css/fischers-friend.css">Fischer's Friend</button></li>        
+				<li><button data-stylesheet="./css/gruen.css">Grünes Grid</button></li>
+				<li><button data-stylesheet="./css/horror.css">Horror Vacui</button></li>
+				<li><button data-stylesheet="./css/industrial.css">Industrial Design</button></li> 
+             </ul>           
+		</aside>
+		<footer>
+			<p><a href="kontakt.html">Kontakt</a></p>
+			<p>© 2018 by SELFHTML</p>
+		</footer>
+
 </body>
 </html>
