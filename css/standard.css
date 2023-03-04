@@ -48,7 +48,7 @@ figure figcaption {
 }
 
 #logo {
-  background: #F1F3F4 url("https://beta.oscon.in/img/logo.png") 0px 0px no-repeat;
+  background: #F1F3F4 url("./img/logo.png") 0px 0px no-repeat;
   display: inline-block;
   width: 150px;
   height: 150px;
