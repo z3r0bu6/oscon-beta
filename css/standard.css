@@ -166,7 +166,7 @@ footer * {
   justify-content: space-between;
 }
 footer p:last-child {
-  text-align: right;
+  text-align: center;
 }
 /* Smart Phones und Tablets mit mittlerer Auflösung */
 @media all and (min-width: 35em) {
