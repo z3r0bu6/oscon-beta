@@ -1,127 +1,90 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
-/* klassisches Layout für SELFHTML-Beispiele */
-
-@import url(https://fonts.googleapis.com/css?family=Playball);
+/* flexibles Layout im klassischen 2-Spalten-Layout in mehreren Graustufen */
 
 html {
-  background: #f0d9a2;
-  color: #5d0505;
+  background: white;
+  color: black;	
+  font-family: courier;
 }
 
 body {
-	margin: 1em auto;
-	max-width: 65em;
-	font-family: sans-serif;
+  margin: 0.5em auto;
+  max-width: 65em;
 }
 
-h1, main, aside, main svg {
-	border-radius: 0 .5em .5em;
-	border: 1px none;
-	padding: .5em 1em;
-	margin: 0;
+h1, article, aside  {
+  padding: .5em;
+  margin: .5em;
 }
 
 h1, h2 {
-	background: #f0d9a2;
-	color: #5d0505;
-	font-family: Playball;
-	font-size: 2.5rem;
-}
-
-aside h2 {
-	font-size: 1.8rem;	
-}
-
-header {
-  border-color: transparent;
+  -webkit-text-decoration: underline dashed;	
+  text-decoration: underline;
+  text-decoration: underline dashed;
 }
 
 #logo {
- display:inline-block;
- text-shadow: none; 
- color: transparent;
- background:url(../img/logo-classic.svg);
- width:100px;
- height:50px;
+ font: 0/0 a; text-shadow: none; color: transparent;
+ font-weight: bold;
+ position: relative;
 }
 
-h1::after {
-  content: '- im classic Look';
+#logo:before {
+  position: absolute;	
+  content: "black";
+  color: black;
+  font-size: 3rem;
+  top: -0em;
+  left: -3em;
 }
 
+#logo:after {
+  position: absolute;	
+  content: "& white";
+  color: white;
+  text-shadow:  
+     1px  1px 1px black,
+     1px -1px 1px black,
+    -1px  1px 1px black,
+    -1px -1px 1px black;
+  font-size: 3rem;
+  top: 1em;
+  left: -4em;
+}
 
-article img {
+h1 {
+  padding-left: 5em;
+}
+
+#index img {
 	width: 33%;
 	float: right;
 	margin-left: 0.2em;
 }
 
+img {
+	filter: grayscale(100%);
+ }
+ 
 figure {
-  display: inline-block;
-  width: 30%;
-  margin: 0.2em;
-}
+  display: inline-block;	
+  width: 31%;
+  margin: 0 0 0.5em;
+} 
+
 figure img {
   width: 100%;
 }
-figure figcaption {
-  font-style: italic;
-}
 
-section {
-  border-color: transparent;
-}
-article {
-  border-color: transparent;
-}
 aside {
-  border-color: transparent;
-}
-footer {
-  border-color:transparent;
-}
+  border: 2px dashed black;
+} 
 
-#styleswitcher  ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#styleswitcher button {
-  width: 9em;
-  margin-bottom: 0.2em;
-}
-
-nav a, #styleswitcher button {
-  background: #5d0505;
+table, th, td { 
   border: 1px solid; 
-  border-color: #5d5050;
-  border-left-color: #f0d9a2;
-  color:  #f0d9a2;
-}
-
-nav li:first-child  a{ border-radius: 1em 0 0 1em; }
-nav li:last-child  a{ border-radius: 0 1em 1em 0; }
-
-nav a:hover, nav a:focus, #styleswitcher  button:hover, #styleswitcher  button:focus {
-  background: orange;
-  border-color: #5d5050;
-  color:  #5d0505;
-}
-
-nav a[aria-current=page] {
-	color:orange;
-	font-weight:bold;
-}
-nav a[aria-current=page]:hover,nav a[aria-current=page]:focus {
-	color:#5d0505;
-
-}
-
-a {
-  color: blue;
+  border-collapse: collapse; 
 }
 
 /* responsives Layout */
@@ -132,20 +95,22 @@ body {
 }
 
 /* Mobile first - alle Dokument-Blöcke bekommen 100% Breite */
-header, nav, article, section, aside, footer {
-  border-radius: 0px 0.5em 0.5em;
-  border: 1px none;
-  padding: 0.5em;
-  margin: 0.5em;
+header, nav, nav a, article, section, aside, footer {
+  border: 1px solid;
+  padding: 0.5em 1em;
+  margin: 0.5em 1em;
   flex: 1 100%;
 }
 
 header {
+  background: #F1F3F4;
+  border-color: #d5d5d5;
   display: flex;
   flex-flow: row wrap;
 }
 header * {
   flex: 1 1 0%;
+  margin: 0 1em;
 }
 header img {
   flex: 0 0 150px;
@@ -155,30 +120,55 @@ header nav {
   flex: 1 1 100%;
 }
 nav, nav ul, nav li{
-  margin: 0;
-  padding: 0;
-  border: none;
+  margin: 0.2em 0.5em;
+  padding: 0 0.5em;
+  border: 0;
 }
 nav ul {
   display: flex;
   flex-direction: column;
 }
 nav li {
-  list-style-type: none;
-  margin: 1.3em 0;
-  padding:0;
+  list-style-type:none;
   flex: 1 1 100%;
 }
-nav a {
-  display: inline-block;
-  margin: 0;
-  width: 96%;
-  padding: 0.5em 2%;
+
+nav a[aria-current=page] {
+	font-variant:small-caps;
+	font-weight:bold;
+}
+
+#styleswitcher  ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav a, #styleswitcher button {
+  display:inline-block;
+  width:95%;
+  background: #ccc;
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 0.2em;
+  padding: 0.2em 1em;
   text-decoration: none;
   text-align: center;
 }
 
+nav a:hover, nav a:focus, #styleswitcher button:hover, #styleswitcher button:focus {
+  background: #333;
+  color: white;
+}
+
+article {
+  border-color: transparent;
+}
+aside {
+  border-color: transparent;
+}
 footer {
+  border-color: transparent;
   display: flex;
   flex-flow: row wrap;
 }
@@ -191,53 +181,44 @@ footer p:last-child {
 }
 /* Smart Phones und Tablets mit mittlerer Auflösung */
 @media all and (min-width: 35em) {
-  header img {
-    margin-right: 50px;
-  }
-  nav ul {
-    flex-direction: row;
-  }
-  nav li {
-    flex: 1 1 0%;
-  }
-  article {
-    order: 2;
-  }
+header {
+  flex-direction: row;  
+}
+header img {
+  margin-right: 50px;
+}
 
-  #news {
-    flex: 1 auto;
-    order: 3;
-  }
+header nav {
+  flex: 1 1 0%;
+  order: 1;
+}
 
-  aside {
-    /* durch auto werden die beiden asides in eine Zeile gesetzt */
-    flex: 1 auto;
-    order: 4;
-  }
-  
-  footer {
-    order: 5;
-  }
+h1  {
+  flex: 4 1 0%;
+  order: 2;
+}
+
+
+article {
+  flex: 4 1 0%;
+  order: 2;
+}
+#news {
+  flex: 1 1 100%;	
+  order: 3;
+}
+aside {
+  flex: 1 1 0%;
+  order: 1;
+}
+footer {
+  order: 5;
+}
 }
 
      /* Large screens */
-@media all and (min-width: 50em) {
-  article {
-    /* Der Article wird 2.5x so breit wie die beiden asides! */
-    order: 3;
-    flex: 5 1 0%;
-  }
-  
-  aside {
-    flex: 2 1 0%;
-  }
-  
-  #news {
-    flex: 2 1 0%;
-    order: 2;
-    align-self: center;
-    height: 12em;
-  }
+     @media all and (min-width: 50em) {
+ 
 }
 
 /* Terminkalender */
@@ -246,7 +227,6 @@ table, th, td {
 	width: 100%;
   	border: 1px solid; 
   	border-collapse: collapse; 
-  	color: #5d0505;
 }
 
 th, td {
@@ -254,8 +234,8 @@ th, td {
 }
 
 th {
-	background: #5d0505;
-	color: orange;
+	background: black;
+	color: white;
 }
 
 caption {
