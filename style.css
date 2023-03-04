@@ -88,8 +88,8 @@ address {
 }
 aside > div {
 	margin: 10px auto;
-	background: #AEC6CF;
-	min-height: 100px;
+	background: #000000;
+	min-height: 80px;
 }
 #logo {
     display: inline-block;
