@@ -26,7 +26,7 @@ h1 {
 }
 
 h1::after {
-  content: 'OpenSource IT Consulting';
+  content: '- OpenSource IT Consulting';
 }
 
 article img {
